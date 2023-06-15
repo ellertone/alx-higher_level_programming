@@ -25,6 +25,7 @@ unsigned int _strlen(const char *str)
  *
  *Return: the address of the new element or NULL if failed
  */
+
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
