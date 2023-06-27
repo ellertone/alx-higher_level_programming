@@ -1,5 +1,5 @@
 #!/bin/bash
-chmod +x *.py
+chmod +x *.py ||chmod +x *.sh
 read -p "Enter your commit message: " commit
 
 git add .
