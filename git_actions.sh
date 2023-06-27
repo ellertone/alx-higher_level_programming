@@ -1,6 +1,6 @@
-
 #!/bin/bash
-clear
+
+chmod +x *.py
 read -p "Enter your commit message: " commit
 
 git add .
