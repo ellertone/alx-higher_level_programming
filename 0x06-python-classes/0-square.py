@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+'''Class Square
+'''
+
 
 class Square:
-    def __init__(self, height, width):
-        self.height = height
-        self.width = width
+    '''Class Square
+    '''
+    pass

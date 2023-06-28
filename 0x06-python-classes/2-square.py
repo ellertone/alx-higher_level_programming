@@ -3,11 +3,11 @@
 
 
 class Square:
-    '''Optional Class attribute size'''
+    '''dOptional Class attribute size'''
     pass
 
     def __init__(self, size=0):
-        '''Initalization for class Square'''
+        '''Initialization for class Square'''
         if type(size) != int:
             raise TypeError("size must be an integer")
         if size < 0:
