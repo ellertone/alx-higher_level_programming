@@ -85,19 +85,19 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertEqual(range(5), Base(range(5)).id)
 
     def test_bytes_id(self):
-        self.assertEqual(b"Python", Base(b"Python").id)
+        self.assertEqual(b'Python', Base(b'Python').id)
 
     def test_bytearray_id(self):
-        self.assertEqual(bytearray(b"abcefg"), Base(bytearray(b"abcefg")).id)
+        self.assertEqual(bytearray(b'abcefg'), Base(bytearray(b'abcefg')).id)
 
     def test_memoryview_id(self):
-        self.assertEqual(memoryview(b"abcefg"), Base(memoryview(b"abcefg")).id)
+        self.assertEqual(memoryview(b'abcefg'), Base(memoryview(b'abcefg')).id)
 
     def test_inf_id(self):
-        self.assertEqual(float("inf"), Base(float("inf")).id)
+        self.assertEqual(float('inf'), Base(float('inf')).id)
 
     def test_NaN_id(self):
-        self.assertNotEqual(float("nan"), Base(float("nan")).id)
+        self.assertNotEqual(float('nan'), Base(float('nan')).id)
 
     def test_two_args(self):
         with self.assertRaises(TypeError):
@@ -261,7 +261,7 @@ class TestBase_from_json_string(unittest.TestCase):
     def test_from_json_string_two_squares(self):
         list_input = [
             {"id": 89, "size": 10, "height": 4},
-            {"id": 7, "size": 1, "height": 7},
+            {"id": 7, "size": 1, "height": 7}
         ]
         json_list_input = Square.to_json_string(list_input)
         list_output = Square.from_json_string(json_list_input)
@@ -542,7 +542,6 @@ class TestBase_load_from_file_csv(unittest.TestCase):
     def test_load_from_file_csv_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file_csv([], 1)
-
 
 if __name__ == "__main__":
     unittest.main()
