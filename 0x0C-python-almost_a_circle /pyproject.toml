@@ -1,2 +1,0 @@
-#[tool.black]
-#target-version = ['pycodestyle>=2.10.0']
