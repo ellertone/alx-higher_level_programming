@@ -157,23 +157,23 @@ class TestRectangle_width(unittest.TestCase):
 
     def test_bytes_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(b'Python', 2)
+            Rectangle(b"Python", 2)
 
     def test_bytearray_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(bytearray(b'abcdefg'), 2)
+            Rectangle(bytearray(b"abcdefg"), 2)
 
     def test_memoryview_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(memoryview(b'abcedfg'), 2)
+            Rectangle(memoryview(b"abcedfg"), 2)
 
     def test_inf_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(float('inf'), 2)
+            Rectangle(float("inf"), 2)
 
     def test_nan_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(float('nan'), 2)
+            Rectangle(float("nan"), 2)
 
     def test_negative_width(self):
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
@@ -229,23 +229,23 @@ class TestRectangle_height(unittest.TestCase):
 
     def test_bytes_height(self):
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(1, b'Python')
+            Rectangle(1, b"Python")
 
     def test_bytearray_height(self):
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(1, bytearray(b'abcdefg'))
+            Rectangle(1, bytearray(b"abcdefg"))
 
     def test_memoryview_height(self):
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(1, memoryview(b'abcedfg'))
+            Rectangle(1, memoryview(b"abcedfg"))
 
     def test_inf_height(self):
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(1, float('inf'))
+            Rectangle(1, float("inf"))
 
     def test_nan_height(self):
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(1, float('nan'))
+            Rectangle(1, float("nan"))
 
     def test_negative_height(self):
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
@@ -305,23 +305,23 @@ class TestRectangle_x(unittest.TestCase):
 
     def test_bytes_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Rectangle(1, 2, b'Python')
+            Rectangle(1, 2, b"Python")
 
     def test_bytearray_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Rectangle(1, 2, bytearray(b'abcdefg'))
+            Rectangle(1, 2, bytearray(b"abcdefg"))
 
     def test_memoryview_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Rectangle(1, 2, memoryview(b'abcedfg'))
+            Rectangle(1, 2, memoryview(b"abcedfg"))
 
     def test_inf_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Rectangle(1, 2, float('inf'), 2)
+            Rectangle(1, 2, float("inf"), 2)
 
     def test_nan_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Rectangle(1, 2, float('nan'), 2)
+            Rectangle(1, 2, float("nan"), 2)
 
     def test_negative_x(self):
         with self.assertRaisesRegex(ValueError, "x must be >= 0"):
@@ -373,23 +373,23 @@ class TestRectangle_y(unittest.TestCase):
 
     def test_bytes_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
-            Rectangle(1, 2, 3, b'Python')
+            Rectangle(1, 2, 3, b"Python")
 
     def test_bytearray_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
-            Rectangle(1, 2, 3, bytearray(b'abcdefg'))
+            Rectangle(1, 2, 3, bytearray(b"abcdefg"))
 
     def test_memoryview_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
-            Rectangle(1, 2, 3, memoryview(b'abcedfg'))
+            Rectangle(1, 2, 3, memoryview(b"abcedfg"))
 
     def test_inf_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
-            Rectangle(1, 2, 1, float('inf'))
+            Rectangle(1, 2, 1, float("inf"))
 
     def test_nan_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
-            Rectangle(1, 2, 1, float('nan'))
+            Rectangle(1, 2, 1, float("nan"))
 
     def test_negative_y(self):
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
@@ -786,7 +786,7 @@ class TestRectangle_to_dictionary(unittest.TestCase):
 
     def test_to_dictionary_output(self):
         r = Rectangle(10, 2, 1, 9, 5)
-        correct = {'x': 1, 'y': 9, 'id': 5, 'height': 2, 'width': 10}
+        correct = {"x": 1, "y": 9, "id": 5, "height": 2, "width": 10}
         self.assertDictEqual(correct, r.to_dictionary())
 
     def test_to_dictionary_no_object_changes(self):
@@ -799,6 +799,7 @@ class TestRectangle_to_dictionary(unittest.TestCase):
         r = Rectangle(10, 2, 4, 1, 2)
         with self.assertRaises(TypeError):
             r.to_dictionary(1)
+
 
 if __name__ == "__main__":
     unittest.main()

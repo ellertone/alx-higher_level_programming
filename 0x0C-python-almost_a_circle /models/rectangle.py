@@ -90,7 +90,6 @@ class Rectangle(Base):
         for row in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
 
-            
     def update(self, *args, **kwargs):
         if args:
             # Process positional arguments
