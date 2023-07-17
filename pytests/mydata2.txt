@@ -1,0 +1,3 @@
+Hello Ellertone. 
+ This is input and output in python
+ And Further application.
